@@ -13,6 +13,36 @@
 		A238C9542539E85500E397A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A238C9522539E85500E397A9 /* Main.storyboard */; };
 		A238C9562539E85800E397A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A238C9552539E85800E397A9 /* Assets.xcassets */; };
 		A238C9592539E85800E397A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A238C9572539E85800E397A9 /* LaunchScreen.storyboard */; };
+		A238CA002539EA9000E397A9 /* PlayFabDataDataModels.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9CD2539EA8700E397A9 /* PlayFabDataDataModels.m */; };
+		A238CA012539EA9000E397A9 /* PlayFabExperimentationAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9CE2539EA8800E397A9 /* PlayFabExperimentationAPI.m */; };
+		A238CA022539EA9000E397A9 /* PlayFabLocalizationDataModels.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9D22539EA8800E397A9 /* PlayFabLocalizationDataModels.m */; };
+		A238CA032539EA9000E397A9 /* PlayFabProfilesAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9D32539EA8800E397A9 /* PlayFabProfilesAPI.m */; };
+		A238CA042539EA9000E397A9 /* PlayFabSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9D52539EA8900E397A9 /* PlayFabSDK.m */; };
+		A238CA052539EA9000E397A9 /* PlayFabMultiplayerDataModels.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9D62539EA8900E397A9 /* PlayFabMultiplayerDataModels.m */; };
+		A238CA062539EA9000E397A9 /* PlayFabClientDataModels.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9D72539EA8900E397A9 /* PlayFabClientDataModels.m */; };
+		A238CA072539EA9000E397A9 /* PlayFabError.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9D82539EA8900E397A9 /* PlayFabError.m */; };
+		A238CA082539EA9000E397A9 /* PlayFabInsightsAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9DB2539EA8A00E397A9 /* PlayFabInsightsAPI.m */; };
+		A238CA092539EA9000E397A9 /* PlayFabVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9DD2539EA8A00E397A9 /* PlayFabVersion.m */; };
+		A238CA0A2539EA9000E397A9 /* PlayFabCloudScriptDataModels.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9DF2539EA8A00E397A9 /* PlayFabCloudScriptDataModels.m */; };
+		A238CA0B2539EA9000E397A9 /* PlayFabGroupsAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9E12539EA8B00E397A9 /* PlayFabGroupsAPI.m */; };
+		A238CA0C2539EA9000E397A9 /* PlayFabAuthenticationAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9E32539EA8B00E397A9 /* PlayFabAuthenticationAPI.m */; };
+		A238CA0D2539EA9000E397A9 /* PlayFabSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9E42539EA8B00E397A9 /* PlayFabSettings.m */; };
+		A238CA0E2539EA9000E397A9 /* PlayFabConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9E62539EA8C00E397A9 /* PlayFabConnection.m */; };
+		A238CA0F2539EA9000E397A9 /* PlayFabExperimentationDataModels.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9E72539EA8C00E397A9 /* PlayFabExperimentationDataModels.m */; };
+		A238CA102539EA9000E397A9 /* PlayFabGroupsDataModels.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9E92539EA8C00E397A9 /* PlayFabGroupsDataModels.m */; };
+		A238CA112539EA9000E397A9 /* PlayFabBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9EC2539EA8D00E397A9 /* PlayFabBaseModel.m */; };
+		A238CA122539EA9000E397A9 /* PlayFabAuthenticationDataModels.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9EE2539EA8D00E397A9 /* PlayFabAuthenticationDataModels.m */; };
+		A238CA132539EA9000E397A9 /* PlayFabMultiplayerAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9EF2539EA8D00E397A9 /* PlayFabMultiplayerAPI.m */; };
+		A238CA142539EA9000E397A9 /* PlayFabInsightsDataModels.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9F02539EA8D00E397A9 /* PlayFabInsightsDataModels.m */; };
+		A238CA152539EA9000E397A9 /* PlayFabProfilesDataModels.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9F52539EA8E00E397A9 /* PlayFabProfilesDataModels.m */; };
+		A238CA162539EA9000E397A9 /* PlayFabLocalizationAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9F62539EA8E00E397A9 /* PlayFabLocalizationAPI.m */; };
+		A238CA172539EA9000E397A9 /* PlayFabClientAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9F82539EA8F00E397A9 /* PlayFabClientAPI.m */; };
+		A238CA192539EA9000E397A9 /* PlayFabCloudScriptAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9FB2539EA8F00E397A9 /* PlayFabCloudScriptAPI.m */; };
+		A238CA1A2539EA9000E397A9 /* PlayFabDataAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = A238C9FE2539EA9000E397A9 /* PlayFabDataAPI.m */; };
+		A238CA272539EBD800E397A9 /* JAGProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = A238CA1F2539EBD600E397A9 /* JAGProperty.m */; };
+		A238CA282539EBD800E397A9 /* license.txt in Resources */ = {isa = PBXBuildFile; fileRef = A238CA222539EBD700E397A9 /* license.txt */; };
+		A238CA292539EBD800E397A9 /* JAGPropertyConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = A238CA242539EBD700E397A9 /* JAGPropertyConverter.m */; };
+		A238CA2A2539EBD800E397A9 /* JAGPropertyFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = A238CA252539EBD700E397A9 /* JAGPropertyFinder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +54,67 @@
 		A238C9552539E85800E397A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A238C9582539E85800E397A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A238C95A2539E85800E397A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A238C9CA2539EA8600E397A9 /* PlayWithPlayFab-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlayWithPlayFab-Bridging-Header.h"; sourceTree = "<group>"; };
+		A238C9CB2539EA8700E397A9 /* PlayFabDataDataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabDataDataModels.h; sourceTree = "<group>"; };
+		A238C9CC2539EA8700E397A9 /* PlayFabClientDataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabClientDataModels.h; sourceTree = "<group>"; };
+		A238C9CD2539EA8700E397A9 /* PlayFabDataDataModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabDataDataModels.m; sourceTree = "<group>"; };
+		A238C9CE2539EA8800E397A9 /* PlayFabExperimentationAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabExperimentationAPI.m; sourceTree = "<group>"; };
+		A238C9CF2539EA8800E397A9 /* PlayFabVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabVersion.h; sourceTree = "<group>"; };
+		A238C9D02539EA8800E397A9 /* PlayFabGroupsAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabGroupsAPI.h; sourceTree = "<group>"; };
+		A238C9D12539EA8800E397A9 /* PlayFabExperimentationAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabExperimentationAPI.h; sourceTree = "<group>"; };
+		A238C9D22539EA8800E397A9 /* PlayFabLocalizationDataModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabLocalizationDataModels.m; sourceTree = "<group>"; };
+		A238C9D32539EA8800E397A9 /* PlayFabProfilesAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabProfilesAPI.m; sourceTree = "<group>"; };
+		A238C9D42539EA8800E397A9 /* PlayFabBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabBaseModel.h; sourceTree = "<group>"; };
+		A238C9D52539EA8900E397A9 /* PlayFabSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabSDK.m; sourceTree = "<group>"; };
+		A238C9D62539EA8900E397A9 /* PlayFabMultiplayerDataModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabMultiplayerDataModels.m; sourceTree = "<group>"; };
+		A238C9D72539EA8900E397A9 /* PlayFabClientDataModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabClientDataModels.m; sourceTree = "<group>"; };
+		A238C9D82539EA8900E397A9 /* PlayFabError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabError.m; sourceTree = "<group>"; };
+		A238C9D92539EA8900E397A9 /* PlayFabProfilesAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabProfilesAPI.h; sourceTree = "<group>"; };
+		A238C9DA2539EA8A00E397A9 /* PlayFabProfilesDataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabProfilesDataModels.h; sourceTree = "<group>"; };
+		A238C9DB2539EA8A00E397A9 /* PlayFabInsightsAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabInsightsAPI.m; sourceTree = "<group>"; };
+		A238C9DC2539EA8A00E397A9 /* PlayFabClientAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabClientAPI.h; sourceTree = "<group>"; };
+		A238C9DD2539EA8A00E397A9 /* PlayFabVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabVersion.m; sourceTree = "<group>"; };
+		A238C9DE2539EA8A00E397A9 /* PlayFabError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabError.h; sourceTree = "<group>"; };
+		A238C9DF2539EA8A00E397A9 /* PlayFabCloudScriptDataModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabCloudScriptDataModels.m; sourceTree = "<group>"; };
+		A238C9E02539EA8A00E397A9 /* PlayFabLocalizationAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabLocalizationAPI.h; sourceTree = "<group>"; };
+		A238C9E12539EA8B00E397A9 /* PlayFabGroupsAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabGroupsAPI.m; sourceTree = "<group>"; };
+		A238C9E22539EA8B00E397A9 /* PlayFabInsightsDataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabInsightsDataModels.h; sourceTree = "<group>"; };
+		A238C9E32539EA8B00E397A9 /* PlayFabAuthenticationAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabAuthenticationAPI.m; sourceTree = "<group>"; };
+		A238C9E42539EA8B00E397A9 /* PlayFabSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabSettings.m; sourceTree = "<group>"; };
+		A238C9E52539EA8B00E397A9 /* PlayFabAuthenticationDataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabAuthenticationDataModels.h; sourceTree = "<group>"; };
+		A238C9E62539EA8C00E397A9 /* PlayFabConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabConnection.m; sourceTree = "<group>"; };
+		A238C9E72539EA8C00E397A9 /* PlayFabExperimentationDataModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabExperimentationDataModels.m; sourceTree = "<group>"; };
+		A238C9E82539EA8C00E397A9 /* PlayFabSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabSDK.h; sourceTree = "<group>"; };
+		A238C9E92539EA8C00E397A9 /* PlayFabGroupsDataModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabGroupsDataModels.m; sourceTree = "<group>"; };
+		A238C9EA2539EA8C00E397A9 /* PlayFabMultiplayerAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabMultiplayerAPI.h; sourceTree = "<group>"; };
+		A238C9EB2539EA8C00E397A9 /* PlayFabExperimentationDataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabExperimentationDataModels.h; sourceTree = "<group>"; };
+		A238C9EC2539EA8D00E397A9 /* PlayFabBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabBaseModel.m; sourceTree = "<group>"; };
+		A238C9ED2539EA8D00E397A9 /* PlayFabMultiplayerDataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabMultiplayerDataModels.h; sourceTree = "<group>"; };
+		A238C9EE2539EA8D00E397A9 /* PlayFabAuthenticationDataModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabAuthenticationDataModels.m; sourceTree = "<group>"; };
+		A238C9EF2539EA8D00E397A9 /* PlayFabMultiplayerAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabMultiplayerAPI.m; sourceTree = "<group>"; };
+		A238C9F02539EA8D00E397A9 /* PlayFabInsightsDataModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabInsightsDataModels.m; sourceTree = "<group>"; };
+		A238C9F12539EA8E00E397A9 /* PlayFabDataAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabDataAPI.h; sourceTree = "<group>"; };
+		A238C9F22539EA8E00E397A9 /* PlayFabCloudScriptAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabCloudScriptAPI.h; sourceTree = "<group>"; };
+		A238C9F32539EA8E00E397A9 /* PlayFabConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabConnection.h; sourceTree = "<group>"; };
+		A238C9F42539EA8E00E397A9 /* PlayFabGroupsDataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabGroupsDataModels.h; sourceTree = "<group>"; };
+		A238C9F52539EA8E00E397A9 /* PlayFabProfilesDataModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabProfilesDataModels.m; sourceTree = "<group>"; };
+		A238C9F62539EA8E00E397A9 /* PlayFabLocalizationAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabLocalizationAPI.m; sourceTree = "<group>"; };
+		A238C9F72539EA8F00E397A9 /* PlayFabCloudScriptDataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabCloudScriptDataModels.h; sourceTree = "<group>"; };
+		A238C9F82539EA8F00E397A9 /* PlayFabClientAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabClientAPI.m; sourceTree = "<group>"; };
+		A238C9FA2539EA8F00E397A9 /* PlayFabSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabSettings.h; sourceTree = "<group>"; };
+		A238C9FB2539EA8F00E397A9 /* PlayFabCloudScriptAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabCloudScriptAPI.m; sourceTree = "<group>"; };
+		A238C9FC2539EA8F00E397A9 /* PlayFabAuthenticationAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabAuthenticationAPI.h; sourceTree = "<group>"; };
+		A238C9FD2539EA9000E397A9 /* PlayFabLocalizationDataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabLocalizationDataModels.h; sourceTree = "<group>"; };
+		A238C9FE2539EA9000E397A9 /* PlayFabDataAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFabDataAPI.m; sourceTree = "<group>"; };
+		A238C9FF2539EA9000E397A9 /* PlayFabInsightsAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFabInsightsAPI.h; sourceTree = "<group>"; };
+		A238CA1F2539EBD600E397A9 /* JAGProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAGProperty.m; sourceTree = "<group>"; };
+		A238CA202539EBD600E397A9 /* JAGPropertyConverter-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JAGPropertyConverter-Prefix.pch"; sourceTree = "<group>"; };
+		A238CA212539EBD700E397A9 /* JAGProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAGProperty.h; sourceTree = "<group>"; };
+		A238CA222539EBD700E397A9 /* license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.txt; sourceTree = "<group>"; };
+		A238CA232539EBD700E397A9 /* JAGPropertyConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAGPropertyConverter.h; sourceTree = "<group>"; };
+		A238CA242539EBD700E397A9 /* JAGPropertyConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAGPropertyConverter.m; sourceTree = "<group>"; };
+		A238CA252539EBD700E397A9 /* JAGPropertyFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAGPropertyFinder.m; sourceTree = "<group>"; };
+		A238CA262539EBD700E397A9 /* JAGPropertyFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAGPropertyFinder.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +147,7 @@
 		A238C94B2539E85500E397A9 /* PlayWithPlayFab */ = {
 			isa = PBXGroup;
 			children = (
+				A238C9C82539EA6400E397A9 /* PlayFabSDK */,
 				A238C94C2539E85500E397A9 /* AppDelegate.swift */,
 				A238C94E2539E85500E397A9 /* SceneDelegate.swift */,
 				A238C9502539E85500E397A9 /* ViewController.swift */,
@@ -65,6 +157,82 @@
 				A238C95A2539E85800E397A9 /* Info.plist */,
 			);
 			path = PlayWithPlayFab;
+			sourceTree = "<group>";
+		};
+		A238C9C82539EA6400E397A9 /* PlayFabSDK */ = {
+			isa = PBXGroup;
+			children = (
+				A238CA1E2539EBCB00E397A9 /* JAGPropertyConverter */,
+				A238C9FC2539EA8F00E397A9 /* PlayFabAuthenticationAPI.h */,
+				A238C9E32539EA8B00E397A9 /* PlayFabAuthenticationAPI.m */,
+				A238C9E52539EA8B00E397A9 /* PlayFabAuthenticationDataModels.h */,
+				A238C9EE2539EA8D00E397A9 /* PlayFabAuthenticationDataModels.m */,
+				A238C9D42539EA8800E397A9 /* PlayFabBaseModel.h */,
+				A238C9EC2539EA8D00E397A9 /* PlayFabBaseModel.m */,
+				A238C9DC2539EA8A00E397A9 /* PlayFabClientAPI.h */,
+				A238C9F82539EA8F00E397A9 /* PlayFabClientAPI.m */,
+				A238C9CC2539EA8700E397A9 /* PlayFabClientDataModels.h */,
+				A238C9D72539EA8900E397A9 /* PlayFabClientDataModels.m */,
+				A238C9F22539EA8E00E397A9 /* PlayFabCloudScriptAPI.h */,
+				A238C9FB2539EA8F00E397A9 /* PlayFabCloudScriptAPI.m */,
+				A238C9F72539EA8F00E397A9 /* PlayFabCloudScriptDataModels.h */,
+				A238C9DF2539EA8A00E397A9 /* PlayFabCloudScriptDataModels.m */,
+				A238C9F32539EA8E00E397A9 /* PlayFabConnection.h */,
+				A238C9E62539EA8C00E397A9 /* PlayFabConnection.m */,
+				A238C9F12539EA8E00E397A9 /* PlayFabDataAPI.h */,
+				A238C9FE2539EA9000E397A9 /* PlayFabDataAPI.m */,
+				A238C9CB2539EA8700E397A9 /* PlayFabDataDataModels.h */,
+				A238C9CD2539EA8700E397A9 /* PlayFabDataDataModels.m */,
+				A238C9DE2539EA8A00E397A9 /* PlayFabError.h */,
+				A238C9D82539EA8900E397A9 /* PlayFabError.m */,
+				A238C9D12539EA8800E397A9 /* PlayFabExperimentationAPI.h */,
+				A238C9CE2539EA8800E397A9 /* PlayFabExperimentationAPI.m */,
+				A238C9EB2539EA8C00E397A9 /* PlayFabExperimentationDataModels.h */,
+				A238C9E72539EA8C00E397A9 /* PlayFabExperimentationDataModels.m */,
+				A238C9D02539EA8800E397A9 /* PlayFabGroupsAPI.h */,
+				A238C9E12539EA8B00E397A9 /* PlayFabGroupsAPI.m */,
+				A238C9F42539EA8E00E397A9 /* PlayFabGroupsDataModels.h */,
+				A238C9E92539EA8C00E397A9 /* PlayFabGroupsDataModels.m */,
+				A238C9FF2539EA9000E397A9 /* PlayFabInsightsAPI.h */,
+				A238C9DB2539EA8A00E397A9 /* PlayFabInsightsAPI.m */,
+				A238C9E22539EA8B00E397A9 /* PlayFabInsightsDataModels.h */,
+				A238C9F02539EA8D00E397A9 /* PlayFabInsightsDataModels.m */,
+				A238C9E02539EA8A00E397A9 /* PlayFabLocalizationAPI.h */,
+				A238C9F62539EA8E00E397A9 /* PlayFabLocalizationAPI.m */,
+				A238C9FD2539EA9000E397A9 /* PlayFabLocalizationDataModels.h */,
+				A238C9D22539EA8800E397A9 /* PlayFabLocalizationDataModels.m */,
+				A238C9EA2539EA8C00E397A9 /* PlayFabMultiplayerAPI.h */,
+				A238C9EF2539EA8D00E397A9 /* PlayFabMultiplayerAPI.m */,
+				A238C9ED2539EA8D00E397A9 /* PlayFabMultiplayerDataModels.h */,
+				A238C9D62539EA8900E397A9 /* PlayFabMultiplayerDataModels.m */,
+				A238C9D92539EA8900E397A9 /* PlayFabProfilesAPI.h */,
+				A238C9D32539EA8800E397A9 /* PlayFabProfilesAPI.m */,
+				A238C9DA2539EA8A00E397A9 /* PlayFabProfilesDataModels.h */,
+				A238C9F52539EA8E00E397A9 /* PlayFabProfilesDataModels.m */,
+				A238C9E82539EA8C00E397A9 /* PlayFabSDK.h */,
+				A238C9D52539EA8900E397A9 /* PlayFabSDK.m */,
+				A238C9FA2539EA8F00E397A9 /* PlayFabSettings.h */,
+				A238C9E42539EA8B00E397A9 /* PlayFabSettings.m */,
+				A238C9CF2539EA8800E397A9 /* PlayFabVersion.h */,
+				A238C9DD2539EA8A00E397A9 /* PlayFabVersion.m */,
+				A238C9CA2539EA8600E397A9 /* PlayWithPlayFab-Bridging-Header.h */,
+			);
+			path = PlayFabSDK;
+			sourceTree = "<group>";
+		};
+		A238CA1E2539EBCB00E397A9 /* JAGPropertyConverter */ = {
+			isa = PBXGroup;
+			children = (
+				A238CA212539EBD700E397A9 /* JAGProperty.h */,
+				A238CA1F2539EBD600E397A9 /* JAGProperty.m */,
+				A238CA202539EBD600E397A9 /* JAGPropertyConverter-Prefix.pch */,
+				A238CA232539EBD700E397A9 /* JAGPropertyConverter.h */,
+				A238CA242539EBD700E397A9 /* JAGPropertyConverter.m */,
+				A238CA262539EBD700E397A9 /* JAGPropertyFinder.h */,
+				A238CA252539EBD700E397A9 /* JAGPropertyFinder.m */,
+				A238CA222539EBD700E397A9 /* license.txt */,
+			);
+			path = JAGPropertyConverter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,6 +266,7 @@
 				TargetAttributes = {
 					A238C9482539E85500E397A9 = {
 						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1200;
 					};
 				};
 			};
@@ -125,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A238C9592539E85800E397A9 /* LaunchScreen.storyboard in Resources */,
+				A238CA282539EBD800E397A9 /* license.txt in Resources */,
 				A238C9562539E85800E397A9 /* Assets.xcassets in Resources */,
 				A238C9542539E85500E397A9 /* Main.storyboard in Resources */,
 			);
@@ -137,9 +307,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A238CA0A2539EA9000E397A9 /* PlayFabCloudScriptDataModels.m in Sources */,
+				A238CA132539EA9000E397A9 /* PlayFabMultiplayerAPI.m in Sources */,
+				A238CA292539EBD800E397A9 /* JAGPropertyConverter.m in Sources */,
+				A238CA122539EA9000E397A9 /* PlayFabAuthenticationDataModels.m in Sources */,
+				A238CA162539EA9000E397A9 /* PlayFabLocalizationAPI.m in Sources */,
+				A238CA092539EA9000E397A9 /* PlayFabVersion.m in Sources */,
+				A238CA0F2539EA9000E397A9 /* PlayFabExperimentationDataModels.m in Sources */,
+				A238CA152539EA9000E397A9 /* PlayFabProfilesDataModels.m in Sources */,
+				A238CA0D2539EA9000E397A9 /* PlayFabSettings.m in Sources */,
+				A238CA0B2539EA9000E397A9 /* PlayFabGroupsAPI.m in Sources */,
+				A238CA102539EA9000E397A9 /* PlayFabGroupsDataModels.m in Sources */,
+				A238CA042539EA9000E397A9 /* PlayFabSDK.m in Sources */,
+				A238CA032539EA9000E397A9 /* PlayFabProfilesAPI.m in Sources */,
 				A238C9512539E85500E397A9 /* ViewController.swift in Sources */,
+				A238CA002539EA9000E397A9 /* PlayFabDataDataModels.m in Sources */,
+				A238CA142539EA9000E397A9 /* PlayFabInsightsDataModels.m in Sources */,
 				A238C94D2539E85500E397A9 /* AppDelegate.swift in Sources */,
+				A238CA082539EA9000E397A9 /* PlayFabInsightsAPI.m in Sources */,
 				A238C94F2539E85500E397A9 /* SceneDelegate.swift in Sources */,
+				A238CA072539EA9000E397A9 /* PlayFabError.m in Sources */,
+				A238CA022539EA9000E397A9 /* PlayFabLocalizationDataModels.m in Sources */,
+				A238CA052539EA9000E397A9 /* PlayFabMultiplayerDataModels.m in Sources */,
+				A238CA272539EBD800E397A9 /* JAGProperty.m in Sources */,
+				A238CA062539EA9000E397A9 /* PlayFabClientDataModels.m in Sources */,
+				A238CA0C2539EA9000E397A9 /* PlayFabAuthenticationAPI.m in Sources */,
+				A238CA1A2539EA9000E397A9 /* PlayFabDataAPI.m in Sources */,
+				A238CA192539EA9000E397A9 /* PlayFabCloudScriptAPI.m in Sources */,
+				A238CA012539EA9000E397A9 /* PlayFabExperimentationAPI.m in Sources */,
+				A238CA0E2539EA9000E397A9 /* PlayFabConnection.m in Sources */,
+				A238CA2A2539EBD800E397A9 /* JAGPropertyFinder.m in Sources */,
+				A238CA172539EA9000E397A9 /* PlayFabClientAPI.m in Sources */,
+				A238CA112539EA9000E397A9 /* PlayFabBaseModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +485,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73V22638MH;
 				INFOPLIST_FILE = PlayWithPlayFab/Info.plist;
@@ -295,6 +495,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = todosVuelan.PlayWithPlayFab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PlayWithPlayFab/PlayFabSDK/PlayWithPlayFab-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -305,6 +507,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73V22638MH;
 				INFOPLIST_FILE = PlayWithPlayFab/Info.plist;
@@ -314,6 +517,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = todosVuelan.PlayWithPlayFab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PlayWithPlayFab/PlayFabSDK/PlayWithPlayFab-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
