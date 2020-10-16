@@ -59,7 +59,7 @@ class NotificationsHelper: NSObject, UNUserNotificationCenterDelegate {
     }
     
     internal func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler([.list])
+        completionHandler([.alert])
     }
     
     internal func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
