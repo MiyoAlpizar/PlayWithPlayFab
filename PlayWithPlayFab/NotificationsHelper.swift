@@ -54,6 +54,19 @@ class NotificationsHelper: NSObject, UNUserNotificationCenterDelegate {
         delegate.isNotificationsAvailable(available: isGranted)
     }
     
+    public func clearBagde() {
+        UIApplication.shared.applicationIconBadgeNumber = 0
+    }
+    
+    internal func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.list])
+    }
+    
+    internal func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        //let content = response.notification.request.content
+        completionHandler()
+    }
+    
 }
 
 extension AppDelegate {
@@ -63,7 +76,7 @@ extension AppDelegate {
         let current_token = AppHelper.shared.getString(type: UserStrings.token)
         if current_token == token {
             //Token has been registered
-            return
+            //return
         }
         PlayFabHelper.shared.Register(token: token)
     }
