@@ -14,7 +14,7 @@
 
 static NSString * TitleId = @"62E19";
 
-static NSString * DeveloperSecretKey = @"";
+static NSString * DeveloperSecretKey = @"E7QNAWZ9FN3E1WETGH9BSJPK1SADFZP7URT7MYBQ33A8A9OZEG";
 
 static NSString * ProductionEnvironmentURL = @".playfabapi.com";
 

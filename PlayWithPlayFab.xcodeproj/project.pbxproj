@@ -44,6 +44,8 @@
 		A238CA292539EBD800E397A9 /* JAGPropertyConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = A238CA242539EBD700E397A9 /* JAGPropertyConverter.m */; };
 		A238CA2A2539EBD800E397A9 /* JAGPropertyFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = A238CA252539EBD700E397A9 /* JAGPropertyFinder.m */; };
 		A238CA302539F66A00E397A9 /* PlayFabHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A238CA2F2539F66A00E397A9 /* PlayFabHelper.swift */; };
+		A238CA332539F98400E397A9 /* NotificationsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A238CA322539F98400E397A9 /* NotificationsHelper.swift */; };
+		A238CA362539F9EE00E397A9 /* AppHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A238CA352539F9EE00E397A9 /* AppHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +119,9 @@
 		A238CA252539EBD700E397A9 /* JAGPropertyFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAGPropertyFinder.m; sourceTree = "<group>"; };
 		A238CA262539EBD700E397A9 /* JAGPropertyFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAGPropertyFinder.h; sourceTree = "<group>"; };
 		A238CA2F2539F66A00E397A9 /* PlayFabHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayFabHelper.swift; sourceTree = "<group>"; };
+		A238CA322539F98400E397A9 /* NotificationsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsHelper.swift; sourceTree = "<group>"; };
+		A238CA352539F9EE00E397A9 /* AppHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHelper.swift; sourceTree = "<group>"; };
+		A238CA3D253A0C6D00E397A9 /* PlayWithPlayFab.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlayWithPlayFab.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +154,7 @@
 		A238C94B2539E85500E397A9 /* PlayWithPlayFab */ = {
 			isa = PBXGroup;
 			children = (
+				A238CA3D253A0C6D00E397A9 /* PlayWithPlayFab.entitlements */,
 				A238CA2E2539F65A00E397A9 /* Helpers */,
 				A238C9C82539EA6400E397A9 /* PlayFabSDK */,
 				A238C94C2539E85500E397A9 /* AppDelegate.swift */,
@@ -242,6 +248,8 @@
 			isa = PBXGroup;
 			children = (
 				A238CA2F2539F66A00E397A9 /* PlayFabHelper.swift */,
+				A238CA322539F98400E397A9 /* NotificationsHelper.swift */,
+				A238CA352539F9EE00E397A9 /* AppHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -338,10 +346,12 @@
 				A238CA082539EA9000E397A9 /* PlayFabInsightsAPI.m in Sources */,
 				A238C94F2539E85500E397A9 /* SceneDelegate.swift in Sources */,
 				A238CA072539EA9000E397A9 /* PlayFabError.m in Sources */,
+				A238CA332539F98400E397A9 /* NotificationsHelper.swift in Sources */,
 				A238CA022539EA9000E397A9 /* PlayFabLocalizationDataModels.m in Sources */,
 				A238CA052539EA9000E397A9 /* PlayFabMultiplayerDataModels.m in Sources */,
 				A238CA272539EBD800E397A9 /* JAGProperty.m in Sources */,
 				A238CA062539EA9000E397A9 /* PlayFabClientDataModels.m in Sources */,
+				A238CA362539F9EE00E397A9 /* AppHelper.swift in Sources */,
 				A238CA0C2539EA9000E397A9 /* PlayFabAuthenticationAPI.m in Sources */,
 				A238CA1A2539EA9000E397A9 /* PlayFabDataAPI.m in Sources */,
 				A238CA302539F66A00E397A9 /* PlayFabHelper.swift in Sources */,
@@ -498,6 +508,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = PlayWithPlayFab/PlayWithPlayFab.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73V22638MH;
 				INFOPLIST_FILE = PlayWithPlayFab/Info.plist;
@@ -507,6 +519,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = todosVuelan.PlayWithPlayFab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PlayWithPlayFab/PlayFabSDK/PlayWithPlayFab-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -520,6 +533,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = PlayWithPlayFab/PlayWithPlayFab.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73V22638MH;
 				INFOPLIST_FILE = PlayWithPlayFab/Info.plist;
@@ -529,6 +544,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = todosVuelan.PlayWithPlayFab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PlayWithPlayFab/PlayFabSDK/PlayWithPlayFab-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
