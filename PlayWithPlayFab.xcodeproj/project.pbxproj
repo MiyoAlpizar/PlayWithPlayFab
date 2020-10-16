@@ -46,6 +46,10 @@
 		A238CA302539F66A00E397A9 /* PlayFabHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A238CA2F2539F66A00E397A9 /* PlayFabHelper.swift */; };
 		A238CA332539F98400E397A9 /* NotificationsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A238CA322539F98400E397A9 /* NotificationsHelper.swift */; };
 		A238CA362539F9EE00E397A9 /* AppHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A238CA352539F9EE00E397A9 /* AppHelper.swift */; };
+		A238CA44253A13A300E397A9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A238CA43253A13A300E397A9 /* LoginViewController.swift */; };
+		A238CA47253A157C00E397A9 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A238CA46253A157C00E397A9 /* StartViewController.swift */; };
+		A238CA4A253A15C000E397A9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A238CA49253A15C000E397A9 /* Colors.xcassets */; };
+		A238CA4E253A163800E397A9 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A238CA4D253A163800E397A9 /* ColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +126,10 @@
 		A238CA322539F98400E397A9 /* NotificationsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsHelper.swift; sourceTree = "<group>"; };
 		A238CA352539F9EE00E397A9 /* AppHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHelper.swift; sourceTree = "<group>"; };
 		A238CA3D253A0C6D00E397A9 /* PlayWithPlayFab.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlayWithPlayFab.entitlements; sourceTree = "<group>"; };
+		A238CA43253A13A300E397A9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A238CA46253A157C00E397A9 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		A238CA49253A15C000E397A9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		A238CA4D253A163800E397A9 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,16 +162,13 @@
 		A238C94B2539E85500E397A9 /* PlayWithPlayFab */ = {
 			isa = PBXGroup;
 			children = (
-				A238CA3D253A0C6D00E397A9 /* PlayWithPlayFab.entitlements */,
+				A238CA4C253A162400E397A9 /* Extensions */,
+				A238CA41253A136400E397A9 /* Model */,
+				A238CA40253A134F00E397A9 /* Views */,
+				A238CA42253A137200E397A9 /* ViewModels */,
+				A238CA3F253A133600E397A9 /* Defaults */,
 				A238CA2E2539F65A00E397A9 /* Helpers */,
 				A238C9C82539EA6400E397A9 /* PlayFabSDK */,
-				A238C94C2539E85500E397A9 /* AppDelegate.swift */,
-				A238C94E2539E85500E397A9 /* SceneDelegate.swift */,
-				A238C9502539E85500E397A9 /* ViewController.swift */,
-				A238C9522539E85500E397A9 /* Main.storyboard */,
-				A238C9552539E85800E397A9 /* Assets.xcassets */,
-				A238C9572539E85800E397A9 /* LaunchScreen.storyboard */,
-				A238C95A2539E85800E397A9 /* Info.plist */,
 			);
 			path = PlayWithPlayFab;
 			sourceTree = "<group>";
@@ -254,6 +259,53 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		A238CA3F253A133600E397A9 /* Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				A238CA3D253A0C6D00E397A9 /* PlayWithPlayFab.entitlements */,
+				A238C94C2539E85500E397A9 /* AppDelegate.swift */,
+				A238C94E2539E85500E397A9 /* SceneDelegate.swift */,
+				A238C9522539E85500E397A9 /* Main.storyboard */,
+				A238C9552539E85800E397A9 /* Assets.xcassets */,
+				A238C9572539E85800E397A9 /* LaunchScreen.storyboard */,
+				A238C95A2539E85800E397A9 /* Info.plist */,
+				A238CA49253A15C000E397A9 /* Colors.xcassets */,
+			);
+			name = Defaults;
+			sourceTree = "<group>";
+		};
+		A238CA40253A134F00E397A9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A238C9502539E85500E397A9 /* ViewController.swift */,
+				A238CA43253A13A300E397A9 /* LoginViewController.swift */,
+				A238CA46253A157C00E397A9 /* StartViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A238CA41253A136400E397A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A238CA42253A137200E397A9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		A238CA4C253A162400E397A9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A238CA4D253A163800E397A9 /* ColorExtensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -312,6 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A238CA4A253A15C000E397A9 /* Colors.xcassets in Resources */,
 				A238C9592539E85800E397A9 /* LaunchScreen.storyboard in Resources */,
 				A238CA282539EBD800E397A9 /* license.txt in Resources */,
 				A238C9562539E85800E397A9 /* Assets.xcassets in Resources */,
@@ -326,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A238CA44253A13A300E397A9 /* LoginViewController.swift in Sources */,
 				A238CA0A2539EA9000E397A9 /* PlayFabCloudScriptDataModels.m in Sources */,
 				A238CA132539EA9000E397A9 /* PlayFabMultiplayerAPI.m in Sources */,
 				A238CA292539EBD800E397A9 /* JAGPropertyConverter.m in Sources */,
@@ -339,10 +393,12 @@
 				A238CA102539EA9000E397A9 /* PlayFabGroupsDataModels.m in Sources */,
 				A238CA042539EA9000E397A9 /* PlayFabSDK.m in Sources */,
 				A238CA032539EA9000E397A9 /* PlayFabProfilesAPI.m in Sources */,
+				A238CA47253A157C00E397A9 /* StartViewController.swift in Sources */,
 				A238C9512539E85500E397A9 /* ViewController.swift in Sources */,
 				A238CA002539EA9000E397A9 /* PlayFabDataDataModels.m in Sources */,
 				A238CA142539EA9000E397A9 /* PlayFabInsightsDataModels.m in Sources */,
 				A238C94D2539E85500E397A9 /* AppDelegate.swift in Sources */,
+				A238CA4E253A163800E397A9 /* ColorExtensions.swift in Sources */,
 				A238CA082539EA9000E397A9 /* PlayFabInsightsAPI.m in Sources */,
 				A238C94F2539E85500E397A9 /* SceneDelegate.swift in Sources */,
 				A238CA072539EA9000E397A9 /* PlayFabError.m in Sources */,
