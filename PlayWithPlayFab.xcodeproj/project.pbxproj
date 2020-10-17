@@ -50,6 +50,7 @@
 		A238CA47253A157C00E397A9 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A238CA46253A157C00E397A9 /* StartViewController.swift */; };
 		A238CA4A253A15C000E397A9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A238CA49253A15C000E397A9 /* Colors.xcassets */; };
 		A238CA4E253A163800E397A9 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A238CA4D253A163800E397A9 /* ColorExtensions.swift */; };
+		A238CA57253BAD7600E397A9 /* StoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A238CA56253BAD7600E397A9 /* StoryboardExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +131,7 @@
 		A238CA46253A157C00E397A9 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		A238CA49253A15C000E397A9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		A238CA4D253A163800E397A9 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		A238CA56253BAD7600E397A9 /* StoryboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				A238CA4D253A163800E397A9 /* ColorExtensions.swift */,
+				A238CA56253BAD7600E397A9 /* StoryboardExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				A238CA47253A157C00E397A9 /* StartViewController.swift in Sources */,
 				A238C9512539E85500E397A9 /* ViewController.swift in Sources */,
 				A238CA002539EA9000E397A9 /* PlayFabDataDataModels.m in Sources */,
+				A238CA57253BAD7600E397A9 /* StoryboardExtensions.swift in Sources */,
 				A238CA142539EA9000E397A9 /* PlayFabInsightsDataModels.m in Sources */,
 				A238C94D2539E85500E397A9 /* AppDelegate.swift in Sources */,
 				A238CA4E253A163800E397A9 /* ColorExtensions.swift in Sources */,

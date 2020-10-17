@@ -8,6 +8,8 @@
 import UIKit
 class ViewController: UIViewController, NotificationsDelegate {
     
+    @IBOutlet var lblPlayFab: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationsHelper.shared.delegate = self

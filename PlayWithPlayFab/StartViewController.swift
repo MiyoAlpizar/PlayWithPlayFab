@@ -9,12 +9,20 @@ import UIKit
 
 class StartViewController: UIViewController {
     
-    private var indexColor: Int = 0
+    private var indexColor: Int = 1
     private var loops: Int = 0
+    private var isRegistered: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         animateBackground()
+        validateIfRegistered()
+    }
+    
+    private func validateIfRegistered() {
+        if AppHelper.shared.getString(type: UserStrings.playFabID) == "" {
+            isRegistered = false
+        }
     }
     
     private func animateBackground() {
@@ -29,11 +37,32 @@ class StartViewController: UIViewController {
             if self.indexColor >= colors.count {
                 self.indexColor = 0
             }
-            if self.loops > 4 {
-                //self.goMain()
-            }else {
+            if self.loops > 3 {
+                self.goMain()
+            }else if self.loops > 0 && !self.isRegistered {
+                self.goLogin()
+            }
+            else {
                 self.animateBackground()
             }
+        }
+    }
+    
+    private func goMain() {
+        if AppHelper.shared.getString(type: UserStrings.playFabID) != "" {
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            if let vc = sb.instantiateViewController(identifier: "ViewController") as? ViewController {
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: false, completion: nil)
+            }
+        }
+    }
+    
+    private func goLogin() {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        if let vc = sb.instantiateViewController(identifier: "LoginViewController") as? LoginViewController {
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: false, completion: nil)
         }
     }
 }

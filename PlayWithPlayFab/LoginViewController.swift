@@ -9,7 +9,12 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet var txtEmail: UITextField!
+    @IBOutlet var txtPwd: UITextField!
+    @IBOutlet var btnEnter: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        txtPwd.becomeFirstResponder()
     }
 }

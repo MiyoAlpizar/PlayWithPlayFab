@@ -9,6 +9,8 @@ import Foundation
 
 enum UserStrings: String {
     case token = "token"
+    case playFabID = "playFabID"
+    
 }
 
 class AppHelper {
