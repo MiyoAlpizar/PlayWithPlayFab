@@ -126,8 +126,8 @@
                     </view>
                     <connections>
                         <outlet property="btnEnter" destination="Qkx-qN-OXW" id="n6t-ar-p6J"/>
-                        <outlet property="txtEmail" destination="5A3-lZ-gMp" id="GGr-7f-DlW"/>
-                        <outlet property="txtPwd" destination="nBe-t3-xdn" id="aAB-Pl-er4"/>
+                        <outlet property="txtEmail" destination="5A3-lZ-gMp" id="goX-4b-iFO"/>
+                        <outlet property="txtPwd" destination="nBe-t3-xdn" id="brY-S1-Og3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfx-8P-sLV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

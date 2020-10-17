@@ -15,6 +15,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        txtPwd.becomeFirstResponder()
+        txtEmail.becomeFirstResponder()
     }
 }

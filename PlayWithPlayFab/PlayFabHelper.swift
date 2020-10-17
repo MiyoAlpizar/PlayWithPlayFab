@@ -63,4 +63,31 @@ class PlayFabHelper {
         }, withUserData: nil)
     }
     
+    public func LoginWithEmailAndPassword(email: String, pwd: String, completion: @escaping(Bool) -> Void) {
+        let request = ClientLoginWithEmailAddressRequest()
+        request.email = email
+        request.password = pwd
+        api.login(withEmailAddress: request, success: { (result, obj) in
+            
+        }, failure: { (error, obj) in
+            
+        }, withUserData: nil)
+    }
+    
+    public func RegisterUser(email: String, pwd: String, completion: @escaping(Bool) -> Void) {
+        let request = ClientRegisterPlayFabUserRequest()
+        request.username = email
+        request.email = email
+        request.password = pwd
+        api.registerPlayFabUser(request, success: { (result, obj) in
+            
+        }, failure: { (error, obj) in
+            
+        }, withUserData: nil)
+    }
+    
+    public func EnterUser(email: String, pwd: String, completion: @escaping(Bool) -> Void) {
+        
+    }
+    
 }
