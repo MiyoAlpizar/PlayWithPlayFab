@@ -51,6 +51,10 @@
 		A238CA4A253A15C000E397A9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A238CA49253A15C000E397A9 /* Colors.xcassets */; };
 		A238CA4E253A163800E397A9 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A238CA4D253A163800E397A9 /* ColorExtensions.swift */; };
 		A238CA57253BAD7600E397A9 /* StoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A238CA56253BAD7600E397A9 /* StoryboardExtensions.swift */; };
+		A238CA5A253CBCC000E397A9 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A238CA59253CBCC000E397A9 /* CreateAccountViewController.swift */; };
+		A238CA5E253CC69300E397A9 /* ViewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A238CA5D253CC69300E397A9 /* ViewControllerExtentions.swift */; };
+		A238CA61253CC78E00E397A9 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A238CA60253CC78E00E397A9 /* StringExtensions.swift */; };
+		A238CA64253CC7FD00E397A9 /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A238CA63253CC7FD00E397A9 /* CreateAccountViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +136,10 @@
 		A238CA49253A15C000E397A9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		A238CA4D253A163800E397A9 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		A238CA56253BAD7600E397A9 /* StoryboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardExtensions.swift; sourceTree = "<group>"; };
+		A238CA59253CBCC000E397A9 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		A238CA5D253CC69300E397A9 /* ViewControllerExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtentions.swift; sourceTree = "<group>"; };
+		A238CA60253CC78E00E397A9 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		A238CA63253CC7FD00E397A9 /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +290,7 @@
 				A238C9502539E85500E397A9 /* ViewController.swift */,
 				A238CA43253A13A300E397A9 /* LoginViewController.swift */,
 				A238CA46253A157C00E397A9 /* StartViewController.swift */,
+				A238CA59253CBCC000E397A9 /* CreateAccountViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -296,6 +305,7 @@
 		A238CA42253A137200E397A9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A238CA63253CC7FD00E397A9 /* CreateAccountViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -305,6 +315,8 @@
 			children = (
 				A238CA4D253A163800E397A9 /* ColorExtensions.swift */,
 				A238CA56253BAD7600E397A9 /* StoryboardExtensions.swift */,
+				A238CA5D253CC69300E397A9 /* ViewControllerExtentions.swift */,
+				A238CA60253CC78E00E397A9 /* StringExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -393,6 +405,7 @@
 				A238CA152539EA9000E397A9 /* PlayFabProfilesDataModels.m in Sources */,
 				A238CA0D2539EA9000E397A9 /* PlayFabSettings.m in Sources */,
 				A238CA0B2539EA9000E397A9 /* PlayFabGroupsAPI.m in Sources */,
+				A238CA5E253CC69300E397A9 /* ViewControllerExtentions.swift in Sources */,
 				A238CA102539EA9000E397A9 /* PlayFabGroupsDataModels.m in Sources */,
 				A238CA042539EA9000E397A9 /* PlayFabSDK.m in Sources */,
 				A238CA032539EA9000E397A9 /* PlayFabProfilesAPI.m in Sources */,
@@ -405,6 +418,7 @@
 				A238CA4E253A163800E397A9 /* ColorExtensions.swift in Sources */,
 				A238CA082539EA9000E397A9 /* PlayFabInsightsAPI.m in Sources */,
 				A238C94F2539E85500E397A9 /* SceneDelegate.swift in Sources */,
+				A238CA61253CC78E00E397A9 /* StringExtensions.swift in Sources */,
 				A238CA072539EA9000E397A9 /* PlayFabError.m in Sources */,
 				A238CA332539F98400E397A9 /* NotificationsHelper.swift in Sources */,
 				A238CA022539EA9000E397A9 /* PlayFabLocalizationDataModels.m in Sources */,
@@ -414,12 +428,14 @@
 				A238CA362539F9EE00E397A9 /* AppHelper.swift in Sources */,
 				A238CA0C2539EA9000E397A9 /* PlayFabAuthenticationAPI.m in Sources */,
 				A238CA1A2539EA9000E397A9 /* PlayFabDataAPI.m in Sources */,
+				A238CA64253CC7FD00E397A9 /* CreateAccountViewModel.swift in Sources */,
 				A238CA302539F66A00E397A9 /* PlayFabHelper.swift in Sources */,
 				A238CA192539EA9000E397A9 /* PlayFabCloudScriptAPI.m in Sources */,
 				A238CA012539EA9000E397A9 /* PlayFabExperimentationAPI.m in Sources */,
 				A238CA0E2539EA9000E397A9 /* PlayFabConnection.m in Sources */,
 				A238CA2A2539EBD800E397A9 /* JAGPropertyFinder.m in Sources */,
 				A238CA172539EA9000E397A9 /* PlayFabClientAPI.m in Sources */,
+				A238CA5A253CBCC000E397A9 /* CreateAccountViewController.swift in Sources */,
 				A238CA112539EA9000E397A9 /* PlayFabBaseModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

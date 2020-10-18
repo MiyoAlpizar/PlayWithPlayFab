@@ -11,7 +11,7 @@ class StartViewController: UIViewController {
     
     private var indexColor: Int = 1
     private var loops: Int = 0
-    private var isRegistered: Bool = false
+    private var isRegistered: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()

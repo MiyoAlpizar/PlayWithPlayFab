@@ -74,20 +74,23 @@ class PlayFabHelper {
         }, withUserData: nil)
     }
     
-    public func RegisterUser(email: String, pwd: String, completion: @escaping(Bool) -> Void) {
+    public func RegisterUser(userName: String, name: String,email: String, pwd: String, completion: @escaping(Result<String, Error>) -> Void) {
         let request = ClientRegisterPlayFabUserRequest()
-        request.username = email
+        request.username = userName
         request.email = email
         request.password = pwd
-        api.registerPlayFabUser(request, success: { (result, obj) in
-            
+        request.displayName = name
+        request.titleId = "62E19"
+         api.registerPlayFabUser(request, success: { (result, obj) in
+            guard let result = result else {
+                completion(.failure(NSError(domain: "Error empty result", code: 100, userInfo: nil)))
+                return
+            }
+            completion(.success(result.playFabId))
         }, failure: { (error, obj) in
-            
+            if let error = error {
+                completion(.failure(NSError(domain: error.errorMessage, code: 100, userInfo: nil)))
+            }
         }, withUserData: nil)
     }
-    
-    public func EnterUser(email: String, pwd: String, completion: @escaping(Bool) -> Void) {
-        
-    }
-    
 }
