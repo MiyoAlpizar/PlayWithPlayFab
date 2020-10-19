@@ -11,7 +11,7 @@ class StartViewController: UIViewController {
     
     private var indexColor: Int = 1
     private var loops: Int = 0
-    private var isRegistered: Bool = true
+    private var isRegistered: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +20,8 @@ class StartViewController: UIViewController {
     }
     
     private func validateIfRegistered() {
-        if AppHelper.shared.getString(type: UserStrings.playFabID) == "" {
-            isRegistered = false
+        if AppHelper.shared.getString(type: UserStrings.playFabID) != "" {
+            isRegistered = true
         }
     }
     

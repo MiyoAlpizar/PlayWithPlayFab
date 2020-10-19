@@ -13,15 +13,8 @@ class ViewController: UIViewController, NotificationsDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationsHelper.shared.delegate = self
-        PlayFabHelper.shared.LoginUser { (result) in
-            switch result {
-            case .success(_):
-                NotificationsHelper.shared.configPushNotifications()
-                
-            case .failure(_):
-                break
-            }
-        }
+        NotificationsHelper.shared.configPushNotifications()
+        lblPlayFab.text = "PlayFab ID: " + AppHelper.shared.getString(type: UserStrings.playFabID)
     }
     
     func didSetNotification() {

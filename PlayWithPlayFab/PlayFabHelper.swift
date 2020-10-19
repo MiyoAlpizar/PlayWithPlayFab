@@ -28,6 +28,7 @@ class PlayFabHelper {
         login_request.customId = uuid
         login_request.createAccount = true
         
+        
         api.login(withCustomID: login_request, success: { (result, userData) in
             guard let result = result else {
                 completion(.failure(NSError(domain: "No results found", code: 100, userInfo: nil)))
@@ -63,17 +64,25 @@ class PlayFabHelper {
         }, withUserData: nil)
     }
     
+    ///Login Into PlayFab With Credentials
     public func LoginWithEmailAndPassword(email: String, pwd: String, completion: @escaping(Bool) -> Void) {
+        
         let request = ClientLoginWithEmailAddressRequest()
         request.email = email
         request.password = pwd
         api.login(withEmailAddress: request, success: { (result, obj) in
-            
+            if let result = result {
+                completion(true)
+                AppHelper.shared.setString(type: UserStrings.playFabID, value: result.playFabId)
+            }else {
+                completion(false)
+            }
         }, failure: { (error, obj) in
             
         }, withUserData: nil)
     }
     
+    ///Registers User And The Make the Login
     public func RegisterUser(userName: String, name: String,email: String, pwd: String, completion: @escaping(Result<String, Error>) -> Void) {
         let request = ClientRegisterPlayFabUserRequest()
         request.username = userName
@@ -86,11 +95,35 @@ class PlayFabHelper {
                 completion(.failure(NSError(domain: "Error empty result", code: 100, userInfo: nil)))
                 return
             }
-            completion(.success(result.playFabId))
+            self.LoginWithEmailAndPassword(email: email, pwd: pwd) { (isIn) in
+                if isIn {
+                    completion(.success(result.playFabId))
+                }else {
+                    completion(.failure(NSError(domain: "Registered but not Logged In", code: 50, userInfo: nil)))
+                }
+            }
         }, failure: { (error, obj) in
             if let error = error {
                 completion(.failure(NSError(domain: error.errorMessage, code: 100, userInfo: nil)))
             }
         }, withUserData: nil)
     }
+    
+    ///Login with User
+    public func LoginWithUserAndPassword(user: String,pwd: String, completion: @escaping(Bool) -> Void) {
+        let request = ClientLoginWithPlayFabRequest()
+        request.username = user
+        request.password = pwd
+        api.login(withPlayFab: request, success: { (result, obj) in
+            if let result = result {
+                completion(true)
+                AppHelper.shared.setString(type: UserStrings.playFabID, value: result.playFabId)
+            }else {
+                completion(false)
+            }
+        }, failure: { (error, obj) in
+            
+        }, withUserData: nil)
+    }
+    
 }

@@ -270,7 +270,7 @@
     <resources>
         <image name="icon_game" width="512" height="512"/>
         <namedColor name="Accent">
-            <color red="0.25882352941176467" green="0.75686274509803919" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.25900000333786011" green="0.75700002908706665" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
