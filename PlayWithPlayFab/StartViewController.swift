@@ -16,7 +16,7 @@ class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         animateBackground()
-        //validateIfRegistered()
+        validateIfRegistered()
     }
     
     private func validateIfRegistered() {
@@ -27,7 +27,7 @@ class StartViewController: UIViewController {
     
     private func animateBackground() {
         let colors = Vars.main_colors
-        UIView.animate(withDuration: 1.8, animations: { [weak self] in
+        UIView.animate(withDuration: 0.8, animations: { [weak self] in
             guard let `self` = self else { return }
             self.view.backgroundColor = colors[self.indexColor]
         }) { [weak self ](_) in
@@ -37,7 +37,7 @@ class StartViewController: UIViewController {
             if self.indexColor >= colors.count {
                 self.indexColor = 0
             }
-            if self.loops > 3 {
+            if self.loops > 5 {
                 self.goMain()
             }else if self.loops > 0 && !self.isRegistered {
                 self.goLogin()
