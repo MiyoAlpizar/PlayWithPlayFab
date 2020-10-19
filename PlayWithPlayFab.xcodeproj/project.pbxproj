@@ -55,6 +55,8 @@
 		A238CA5E253CC69300E397A9 /* ViewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A238CA5D253CC69300E397A9 /* ViewControllerExtentions.swift */; };
 		A238CA61253CC78E00E397A9 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A238CA60253CC78E00E397A9 /* StringExtensions.swift */; };
 		A238CA64253CC7FD00E397A9 /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A238CA63253CC7FD00E397A9 /* CreateAccountViewModel.swift */; };
+		A242BF02253E0582007E795A /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A242BF01253E0582007E795A /* KeyboardHelper.swift */; };
+		A242BF05253E07B6007E795A /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A242BF04253E07B6007E795A /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +142,8 @@
 		A238CA5D253CC69300E397A9 /* ViewControllerExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtentions.swift; sourceTree = "<group>"; };
 		A238CA60253CC78E00E397A9 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		A238CA63253CC7FD00E397A9 /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
+		A242BF01253E0582007E795A /* KeyboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHelper.swift; sourceTree = "<group>"; };
+		A242BF04253E07B6007E795A /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +269,7 @@
 				A238CA2F2539F66A00E397A9 /* PlayFabHelper.swift */,
 				A238CA322539F98400E397A9 /* NotificationsHelper.swift */,
 				A238CA352539F9EE00E397A9 /* AppHelper.swift */,
+				A242BF01253E0582007E795A /* KeyboardHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -317,6 +322,7 @@
 				A238CA56253BAD7600E397A9 /* StoryboardExtensions.swift */,
 				A238CA5D253CC69300E397A9 /* ViewControllerExtentions.swift */,
 				A238CA60253CC78E00E397A9 /* StringExtensions.swift */,
+				A242BF04253E07B6007E795A /* UIViewExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -410,6 +416,8 @@
 				A238CA042539EA9000E397A9 /* PlayFabSDK.m in Sources */,
 				A238CA032539EA9000E397A9 /* PlayFabProfilesAPI.m in Sources */,
 				A238CA47253A157C00E397A9 /* StartViewController.swift in Sources */,
+				A242BF05253E07B6007E795A /* UIViewExtensions.swift in Sources */,
+				A242BF02253E0582007E795A /* KeyboardHelper.swift in Sources */,
 				A238C9512539E85500E397A9 /* ViewController.swift in Sources */,
 				A238CA002539EA9000E397A9 /* PlayFabDataDataModels.m in Sources */,
 				A238CA57253BAD7600E397A9 /* StoryboardExtensions.swift in Sources */,

@@ -16,7 +16,7 @@ class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         animateBackground()
-        validateIfRegistered()
+        //validateIfRegistered()
     }
     
     private func validateIfRegistered() {

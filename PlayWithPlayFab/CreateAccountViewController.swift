@@ -15,18 +15,23 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet var txtPwd: UITextField!
     @IBOutlet var loading: UIActivityIndicatorView!
     @IBOutlet var btnCreateAccount: UIButton!
+    @IBOutlet var scrollView: UIScrollView!
+    
     
     let viewModel = CreateAccountViewModel()
+    let keyboardHelper = KeyBoardHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        txtUserName.becomeFirstResponder()
         loading.isHidden = true
         setNavtationBar()
         setTargets()
+        txtUserName.becomeFirstResponder()
     }
     
     private func setTargets() {
+        self.view.hideKeyboardWhenTappedAround()
+        keyboardHelper.delegate = self
         btnCreateAccount.addTarget(self, action: #selector(validateInfo), for: UIControl.Event.touchUpInside)
     }
     
@@ -105,4 +110,15 @@ class CreateAccountViewController: UIViewController {
         }
     }
 
+}
+
+extension CreateAccountViewController: KeyBoardDelegate {
+    func heightChanged(height: CGFloat, duration: TimeInterval, isUp: Bool) {
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            guard let `self` = self else { return }
+            self.scrollView.contentSize = CGSize(width: self.scrollView.contentSize.width, height: self.view.frame.height - height)
+            self.scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: height, right: 0)
+        }
+        
+    }
 }

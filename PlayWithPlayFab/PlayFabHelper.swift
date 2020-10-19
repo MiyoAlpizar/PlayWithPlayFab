@@ -64,7 +64,7 @@ class PlayFabHelper {
         }, withUserData: nil)
     }
     
-    ///Login Into PlayFab With Credentials
+    /// Login Into PlayFab With Credentials
     public func LoginWithEmailAndPassword(email: String, pwd: String, completion: @escaping(Bool) -> Void) {
         
         let request = ClientLoginWithEmailAddressRequest()
@@ -82,7 +82,7 @@ class PlayFabHelper {
         }, withUserData: nil)
     }
     
-    ///Registers User And The Make the Login
+    /// Registers User And The Make the Login
     public func RegisterUser(userName: String, name: String,email: String, pwd: String, completion: @escaping(Result<String, Error>) -> Void) {
         let request = ClientRegisterPlayFabUserRequest()
         request.username = userName
@@ -109,7 +109,7 @@ class PlayFabHelper {
         }, withUserData: nil)
     }
     
-    ///Login with User
+    /// Login with User
     public func LoginWithUserAndPassword(user: String,pwd: String, completion: @escaping(Bool) -> Void) {
         let request = ClientLoginWithPlayFabRequest()
         request.username = user
@@ -125,5 +125,6 @@ class PlayFabHelper {
             
         }, withUserData: nil)
     }
+    
     
 }
