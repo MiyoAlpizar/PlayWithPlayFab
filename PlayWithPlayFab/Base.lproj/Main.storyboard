@@ -212,7 +212,7 @@
                                     <constraint firstAttribute="height" constant="44" id="k00-Qk-eBd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nBe-t3-xdn">
                                 <rect key="frame" x="20" y="262" width="374" height="44"/>
@@ -230,7 +230,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qkx-qN-OXW">
-                                <rect key="frame" x="20" y="326" width="374" height="44"/>
+                                <rect key="frame" x="20" y="346" width="374" height="44"/>
                                 <color key="backgroundColor" name="Accent"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="vaC-hc-XKF"/>
@@ -239,10 +239,17 @@
                                 <state key="normal" title="Enter"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qji-5L-uBl">
-                                <rect key="frame" x="20" y="402" width="374" height="30"/>
+                                <rect key="frame" x="20" y="422" width="374" height="30"/>
                                 <color key="tintColor" name="Accent"/>
                                 <state key="normal" title="Create Account"/>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="AfC-QY-iOE">
+                                <rect key="frame" x="197" y="316" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="9Mb-uM-fHi"/>
+                                    <constraint firstAttribute="width" constant="20" id="fBY-0v-VqM"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Y4Q-rs-tj3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -254,18 +261,21 @@
                             <constraint firstItem="nBe-t3-xdn" firstAttribute="leading" secondItem="Y4Q-rs-tj3" secondAttribute="leading" constant="20" id="EBW-QC-6GP"/>
                             <constraint firstItem="UX5-3d-ZIG" firstAttribute="top" secondItem="Y4Q-rs-tj3" secondAttribute="top" constant="20" id="Lrc-oY-Tr6"/>
                             <constraint firstItem="Y4Q-rs-tj3" firstAttribute="trailing" secondItem="Qkx-qN-OXW" secondAttribute="trailing" constant="20" id="MRT-Ba-iVF"/>
+                            <constraint firstItem="AfC-QY-iOE" firstAttribute="top" secondItem="nBe-t3-xdn" secondAttribute="bottom" constant="10" id="Rto-sd-VIp"/>
                             <constraint firstItem="Qji-5L-uBl" firstAttribute="top" secondItem="Qkx-qN-OXW" secondAttribute="bottom" constant="32" id="Txn-kH-yeD"/>
                             <constraint firstItem="nBe-t3-xdn" firstAttribute="top" secondItem="5A3-lZ-gMp" secondAttribute="bottom" constant="14" id="W3K-Sy-ddb"/>
                             <constraint firstItem="UX5-3d-ZIG" firstAttribute="centerX" secondItem="Gt5-NS-26L" secondAttribute="centerX" id="ZPt-Ge-vpM"/>
                             <constraint firstItem="Qji-5L-uBl" firstAttribute="centerX" secondItem="Gt5-NS-26L" secondAttribute="centerX" id="fWb-j5-lbU"/>
                             <constraint firstItem="5A3-lZ-gMp" firstAttribute="top" secondItem="UX5-3d-ZIG" secondAttribute="bottom" constant="20" id="iiI-PV-ZoY"/>
+                            <constraint firstItem="AfC-QY-iOE" firstAttribute="centerX" secondItem="Gt5-NS-26L" secondAttribute="centerX" id="rPb-OE-ElI"/>
                             <constraint firstItem="Y4Q-rs-tj3" firstAttribute="trailing" secondItem="nBe-t3-xdn" secondAttribute="trailing" constant="20" id="wOW-uB-fCz"/>
-                            <constraint firstItem="Qkx-qN-OXW" firstAttribute="top" secondItem="nBe-t3-xdn" secondAttribute="bottom" constant="20" id="zXW-s8-Phb"/>
+                            <constraint firstItem="Qkx-qN-OXW" firstAttribute="top" secondItem="nBe-t3-xdn" secondAttribute="bottom" constant="40" id="zXW-s8-Phb"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btnCreateAccount" destination="Qji-5L-uBl" id="gEX-I1-mBi"/>
                         <outlet property="btnEnter" destination="Qkx-qN-OXW" id="n6t-ar-p6J"/>
+                        <outlet property="loading" destination="AfC-QY-iOE" id="433-Rx-dZB"/>
                         <outlet property="txtEmail" destination="5A3-lZ-gMp" id="goX-4b-iFO"/>
                         <outlet property="txtPwd" destination="nBe-t3-xdn" id="brY-S1-Og3"/>
                     </connections>

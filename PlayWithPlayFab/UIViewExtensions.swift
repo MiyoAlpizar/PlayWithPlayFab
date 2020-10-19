@@ -19,3 +19,15 @@ extension UIView {
         self.endEditing(true)
     }
 }
+
+extension UIActivityIndicatorView {
+    func show() {
+        self.isHidden = false
+        self.startAnimating()
+    }
+    
+    func hide() {
+        self.isHidden = true
+        self.stopAnimating()
+    }
+}

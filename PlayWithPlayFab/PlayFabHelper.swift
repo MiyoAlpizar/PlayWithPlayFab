@@ -65,20 +65,22 @@ class PlayFabHelper {
     }
     
     /// Login Into PlayFab With Credentials
-    public func LoginWithEmailAndPassword(email: String, pwd: String, completion: @escaping(Bool) -> Void) {
+    public func LoginWithEmailAndPassword(email: String, pwd: String, completion: @escaping(Result<Bool, Error>) -> Void) {
         
         let request = ClientLoginWithEmailAddressRequest()
         request.email = email
         request.password = pwd
         api.login(withEmailAddress: request, success: { (result, obj) in
             if let result = result {
-                completion(true)
+                completion(.success(true))
                 AppHelper.shared.setString(type: UserStrings.playFabID, value: result.playFabId)
             }else {
-                completion(false)
+                completion(.failure(NSError(domain: "No results found", code: 50, userInfo: nil)))
             }
         }, failure: { (error, obj) in
-            
+            if let error = error {
+                completion(.failure(error as! Error))
+            }
         }, withUserData: nil)
     }
     
@@ -95,11 +97,16 @@ class PlayFabHelper {
                 completion(.failure(NSError(domain: "Error empty result", code: 100, userInfo: nil)))
                 return
             }
-            self.LoginWithEmailAndPassword(email: email, pwd: pwd) { (isIn) in
-                if isIn {
-                    completion(.success(result.playFabId))
-                }else {
-                    completion(.failure(NSError(domain: "Registered but not Logged In", code: 50, userInfo: nil)))
+            self.LoginWithEmailAndPassword(email: email, pwd: pwd) { (res) in
+                switch res {
+                case .success(let isIn):
+                    if isIn {
+                        completion(.success(result.playFabId))
+                    }else {
+                        completion(.failure(NSError(domain: "Registered but not Logged In", code: 50, userInfo: nil)))
+                    }
+                case .failure(let error):
+                    completion(.failure(error))
                 }
             }
         }, failure: { (error, obj) in
