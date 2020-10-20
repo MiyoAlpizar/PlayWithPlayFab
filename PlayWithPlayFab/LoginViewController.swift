@@ -9,33 +9,48 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet var txtEmail: UITextField!
-    @IBOutlet var txtPwd: UITextField!
-    @IBOutlet var btnEnter: UIButton!
-    @IBOutlet var btnCreateAccount: UIButton!
-    @IBOutlet var loading: UIActivityIndicatorView!
+    @IBOutlet weak var txtEmail: UITextField!
+    @IBOutlet weak var txtPwd: UITextField!
+    @IBOutlet weak var btnEnter: UIButton!
+    @IBOutlet weak var btnCreateAccount: UIButton!
+    @IBOutlet weak var loading: UIActivityIndicatorView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    let keyBoardHelper = KeyBoardHelper()
     
     let viewmodel = LoginViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        txtEmail.becomeFirstResponder()
+        self.view.hideKeyboardWhenTappedAround()
         setTargets()
+        setNavtationBar()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        txtEmail.becomeFirstResponder()
+    }
+    
+    private func setNavtationBar() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.cancel, target: self, action: #selector(close))
+    }
+    
+    @objc private func close() {
+        self.navigationController?.dismiss(animated: true, completion: nil)
     }
     
     private func setTargets() {
+        keyBoardHelper.delegate = self
         self.loading.hide()
         btnCreateAccount.addTarget(self, action: #selector(goCreateAccount), for: UIControl.Event.touchUpInside)
         btnEnter.addTarget(self, action: #selector(goLogin), for: UIControl.Event.touchUpInside)
     }
     
     @objc private func goCreateAccount(){
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        if let vc = sb.instantiateViewController(identifier: "CreateAccountViewController") as? CreateAccountViewController {
-            let nc = UINavigationController(rootViewController: vc)
-            nc.modalPresentationStyle = .fullScreen
-            self.present(nc, animated: true, completion: nil)
-        }
+        let ca = UIStoryboard.main.instantiate(CreateAccountViewController.self)
+        self.navigationController?.pushViewController(ca, animated: true)
+        
     }
     
     @objc private func goLogin() {
@@ -78,11 +93,18 @@ class LoginViewController: UIViewController {
     
     private func goMain() {
         if AppHelper.shared.getString(type: UserStrings.playFabID) != "" {
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-            if let vc = sb.instantiateViewController(identifier: "ViewController") as? ViewController {
-                vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated: false, completion: nil)
-            }
+            let vc = UIStoryboard.main.instantiate(ViewController.self)
+            UIWindow.key?.rootViewController = vc
+        }
+    }
+}
+
+extension LoginViewController: KeyBoardDelegate {
+    func heightChanged(height: CGFloat, duration: TimeInterval, isUp: Bool) {
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            guard let `self` = self else { return }
+            self.scrollView.contentSize = CGSize(width: self.scrollView.contentSize.width, height: self.view.frame.height - height)
+            self.scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: height, right: 0)
         }
     }
 }

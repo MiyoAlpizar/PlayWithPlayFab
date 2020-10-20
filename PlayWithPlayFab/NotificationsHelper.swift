@@ -59,7 +59,7 @@ class NotificationsHelper: NSObject, UNUserNotificationCenterDelegate {
     }
     
     internal func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler([.alert])
+        completionHandler([.banner, .list, .sound, .badge])
     }
     
     internal func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
@@ -76,7 +76,7 @@ extension AppDelegate {
         let current_token = AppHelper.shared.getString(type: UserStrings.token)
         if current_token == token {
             //Token has been registered
-            return
+            //return
         }
         PlayFabHelper.shared.Register(token: token)
     }

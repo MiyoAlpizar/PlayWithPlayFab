@@ -9,20 +9,28 @@ import UIKit
 
 class StartViewController: UIViewController {
     
+    @IBOutlet weak var lblTitle: UILabel!
+    
     private var indexColor: Int = 1
     private var loops: Int = 0
     private var isRegistered: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initAll()
         animateBackground()
         validateIfRegistered()
+        //loginAnonnymously()
     }
     
     private func validateIfRegistered() {
         if AppHelper.shared.getString(type: UserStrings.playFabID) != "" {
-            isRegistered = true
+            isRegistered = false
         }
+    }
+    
+    private func initAll() {
+        lblTitle.font = UIFont.systemFont(ofSize: 45)
     }
     
     private func animateBackground() {
@@ -40,7 +48,7 @@ class StartViewController: UIViewController {
             if self.loops > 5 {
                 self.goMain()
             }else if self.loops > 0 && !self.isRegistered {
-                self.goLogin()
+                self.goChooseLogin()
             }
             else {
                 self.animateBackground()
@@ -48,21 +56,28 @@ class StartViewController: UIViewController {
         }
     }
     
-    private func goMain() {
-        if AppHelper.shared.getString(type: UserStrings.playFabID) != "" {
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-            if let vc = sb.instantiateViewController(identifier: "ViewController") as? ViewController {
-                vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated: false, completion: nil)
+    private func loginAnonnymously() {
+        PlayFabHelper.shared.LoginAnonymousUser { [weak self] (result) in
+            guard let `self` = self else { return }
+            switch result {
+            case .success(let ok):
+                AppHelper.shared.setString(type: UserStrings.playFabID, value: ok.playFabId)
+                self.isRegistered = true
+            case .failure(let error):
+                self.alert(message: error.localizedDescription)
             }
         }
     }
     
-    private func goLogin() {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        if let vc = sb.instantiateViewController(identifier: "LoginViewController") as? LoginViewController {
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: false, completion: nil)
+    private func goMain() {
+        if AppHelper.shared.getString(type: UserStrings.playFabID) != "" {
+            let vc = UIStoryboard.main.instantiate(ViewController.self)
+            UIWindow.key?.rootViewController = vc
         }
+    }
+    
+    private func goChooseLogin() {
+        let vc = UIStoryboard.main.instantiate(LoginModeViewController.self)
+        UIWindow.key?.rootViewController = vc
     }
 }

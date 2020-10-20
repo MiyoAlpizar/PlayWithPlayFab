@@ -8,24 +8,15 @@
 import Foundation
 import UIKit
 
-protocol Storyboardable: class {
-    static var storyboardName: String { get }
-}
-
-extension Storyboardable where Self: UIViewController {
-    static var storyboardName: String {
-        return String(describing: self)
+extension UIStoryboard {
+    public static var main: UIStoryboard {
+        return UIStoryboard(name: "Main", bundle: nil)
     }
-
-    static func storyboardViewController<T: UIViewController>() -> T where T: Storyboardable {
-        let storyboard = UIStoryboard(name: T.storyboardName, bundle: nil)
-
-        guard let vc = storyboard.instantiateInitialViewController() as? T else {
-            fatalError("Could not instantiate initial storyboard with name: \(T.storyboardName)")
+    
+    public func instantiate<A: UIViewController>(_ type: A.Type, withIdentifier identifier: String? = nil) -> A {
+            let id = identifier ?? String(describing: type.self)
+            guard let vc = self.instantiateViewController(withIdentifier: id) as? A else {
+                fatalError("Could not instantiate view controller \(A.self)") }
+            return vc
         }
-
-        return vc
-    }
 }
-
-extension UIViewController: Storyboardable { }

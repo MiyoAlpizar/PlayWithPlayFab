@@ -58,6 +58,7 @@
 		A242BF02253E0582007E795A /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A242BF01253E0582007E795A /* KeyboardHelper.swift */; };
 		A242BF05253E07B6007E795A /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A242BF04253E07B6007E795A /* UIViewExtensions.swift */; };
 		A242BF08253E08E4007E795A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A242BF07253E08E4007E795A /* LoginViewModel.swift */; };
+		A2594A06253F4223000E1789 /* LoginModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2594A05253F4223000E1789 /* LoginModeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,6 +147,7 @@
 		A242BF01253E0582007E795A /* KeyboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHelper.swift; sourceTree = "<group>"; };
 		A242BF04253E07B6007E795A /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		A242BF07253E08E4007E795A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		A2594A05253F4223000E1789 /* LoginModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +300,7 @@
 				A238CA43253A13A300E397A9 /* LoginViewController.swift */,
 				A238CA46253A157C00E397A9 /* StartViewController.swift */,
 				A238CA59253CBCC000E397A9 /* CreateAccountViewController.swift */,
+				A2594A05253F4223000E1789 /* LoginModeViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				A238CA272539EBD800E397A9 /* JAGProperty.m in Sources */,
 				A238CA062539EA9000E397A9 /* PlayFabClientDataModels.m in Sources */,
 				A238CA362539F9EE00E397A9 /* AppHelper.swift in Sources */,
+				A2594A06253F4223000E1789 /* LoginModeViewController.swift in Sources */,
 				A238CA0C2539EA9000E397A9 /* PlayFabAuthenticationAPI.m in Sources */,
 				A238CA1A2539EA9000E397A9 /* PlayFabDataAPI.m in Sources */,
 				A238CA64253CC7FD00E397A9 /* CreateAccountViewModel.swift in Sources */,

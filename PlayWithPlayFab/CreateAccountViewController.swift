@@ -9,13 +9,13 @@ import UIKit
 
 class CreateAccountViewController: UIViewController {
 
-    @IBOutlet var txtUserName: UITextField!
-    @IBOutlet var txtName: UITextField!
-    @IBOutlet var txtEmail: UITextField!
-    @IBOutlet var txtPwd: UITextField!
-    @IBOutlet var loading: UIActivityIndicatorView!
-    @IBOutlet var btnCreateAccount: UIButton!
-    @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet weak var txtUserName: UITextField!
+    @IBOutlet weak var txtName: UITextField!
+    @IBOutlet weak var txtEmail: UITextField!
+    @IBOutlet weak var txtPwd: UITextField!
+    @IBOutlet weak var loading: UIActivityIndicatorView!
+    @IBOutlet weak var btnCreateAccount: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     
     let viewModel = CreateAccountViewModel()
@@ -26,6 +26,10 @@ class CreateAccountViewController: UIViewController {
         loading.isHidden = true
         setNavtationBar()
         setTargets()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         txtUserName.becomeFirstResponder()
     }
     
@@ -36,7 +40,7 @@ class CreateAccountViewController: UIViewController {
     }
     
     private func setNavtationBar() {
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.cancel, target: self, action: #selector(close))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.cancel, target: self, action: #selector(close))
     }
     
     @objc private func close() {
@@ -102,11 +106,8 @@ class CreateAccountViewController: UIViewController {
     
     private func goMain() {
         if AppHelper.shared.getString(type: UserStrings.playFabID) != "" {
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-            if let vc = sb.instantiateViewController(identifier: "ViewController") as? ViewController {
-                vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated: false, completion: nil)
-            }
+            let vc = UIStoryboard.main.instantiate(ViewController.self)
+            UIWindow.key?.rootViewController = vc
         }
     }
 

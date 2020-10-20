@@ -18,8 +18,9 @@ class PlayFabHelper {
         }
     }
     
-    /// Login User into PlayFab server, in order to register for push notifications
-    public func LoginUser(completion: @escaping(Result<ClientLoginResult, Error>) -> Void) {
+    /// Login annonymous user with vendor ID
+    /// This is the best way to login an user, according to PlayFabs docs
+    public func LoginAnonymousUser(completion: @escaping(Result<ClientLoginResult, Error>) -> Void) {
         let login_request = ClientLoginWithCustomIDRequest()
         var uuid: String = "no_uuid"
         if let id = UIDevice.current.identifierForVendor?.uuidString {
@@ -28,12 +29,12 @@ class PlayFabHelper {
         login_request.customId = uuid
         login_request.createAccount = true
         
-        
         api.login(withCustomID: login_request, success: { (result, userData) in
             guard let result = result else {
                 completion(.failure(NSError(domain: "No results found", code: 100, userInfo: nil)))
                 return
             }
+            print("LoggeIn Annonymously....")
             completion(.success(result))
             
         }, failure: { (error, userData) in
@@ -43,6 +44,53 @@ class PlayFabHelper {
                 completion(.failure(NSError(domain: "No error message found", code: 100, userInfo: nil)))
             }
         }, withUserData: nil)
+    }
+    
+    /// Adds user name, email and password to user loggedin annonymoulsy
+    /// If user wants to have the chance to recovery their accounts, they have to add Emai, userName and password to their current anonnymous account
+    public func AddUserAndPassword(email: String,userName: String, password: String, done: @escaping(Result<String, Error>) -> Void) {
+        let request = ClientAddUsernamePasswordRequest()
+        request.email = email
+        request.username = userName
+        request.password = password
+        api.addUsernamePassword(request, success: { (result, obj) in
+            if let result = result {
+                done(.success(result.username))
+            }
+        }, failure: { (error, obj) in
+            if let error = error {
+                done(.failure(NSError(domain: error.error, code: error.code as! Int, userInfo: nil)))
+            }
+        }, withUserData: nil)
+    }
+    
+    
+    /// Gets the info of the current user
+    public func GetUserInfo(done: @escaping(Result<ClientUserAccountInfo, Error>) -> Void) {
+        let request = ClientGetAccountInfoRequest()
+        api.getAccountInfo(request, success: { (result, obj) in
+            if let result = result {
+                done(.success(result.accountInfo))
+            }
+        }, failure: { (error, obj) in
+            if let error = error {
+                done(.failure(NSError(domain: error.error, code: error.code as! Int, userInfo: nil)))
+            }
+        }, withUserData: nil)
+    }
+    
+    /// Gets If User Has or Has Not Saved their User Name, Email And Password
+    public func UserHasUserNameAndPassword(done: @escaping(Bool) -> Void) {
+        GetUserInfo { (result) in
+            switch result {
+            case .success(let userInfo):
+                print(userInfo.playFabId ?? "No PlayFab Id")
+                done(userInfo.username != nil)
+            case .failure(let error):
+                print(error.localizedDescription)
+                done(false)
+            }
+        }
     }
     
     /// Registers the user to receive push notifications, and saves the token in User Settings
@@ -79,7 +127,7 @@ class PlayFabHelper {
             }
         }, failure: { (error, obj) in
             if let error = error {
-                completion(.failure(error as! Error))
+                completion(.failure(NSError(domain: error.error, code: error.code as! Int, userInfo: nil)))
             }
         }, withUserData: nil)
     }
