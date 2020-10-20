@@ -30,7 +30,7 @@ class StartViewController: UIViewController {
     }
     
     private func initAll() {
-        lblTitle.font = UIFont.systemFont(ofSize: 45)
+        lblTitle.font = UIFont(name: "Menlo", size: 45)
     }
     
     private func animateBackground() {
@@ -47,7 +47,7 @@ class StartViewController: UIViewController {
             }
             if self.loops > 5 {
                 self.goMain()
-            }else if self.loops > 0 && !self.isRegistered {
+            }else if self.loops > 3 && !self.isRegistered {
                 self.goChooseLogin()
             }
             else {

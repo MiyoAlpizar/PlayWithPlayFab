@@ -369,6 +369,9 @@
                                     <action selector="LoginAnonymously:" destination="eZ4-p0-y5Q" eventType="touchUpInside" id="kXd-vy-YJL"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="pJg-C5-Y2u">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DWQ-jx-Baf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -381,15 +384,18 @@
                             <constraint firstItem="GhN-3x-7rD" firstAttribute="top" secondItem="9L8-CV-YEk" secondAttribute="bottom" constant="20" id="LRR-Qk-JsW"/>
                             <constraint firstItem="GhN-3x-7rD" firstAttribute="leading" secondItem="DWQ-jx-Baf" secondAttribute="leading" constant="20" id="OvY-Me-hvY"/>
                             <constraint firstItem="bjC-NC-09M" firstAttribute="centerX" secondItem="lxO-54-wRd" secondAttribute="centerX" id="UGp-Sg-37z"/>
+                            <constraint firstItem="pJg-C5-Y2u" firstAttribute="centerY" secondItem="lxO-54-wRd" secondAttribute="centerY" id="WBb-Nu-d0A"/>
                             <constraint firstItem="9L8-CV-YEk" firstAttribute="leading" secondItem="DWQ-jx-Baf" secondAttribute="leading" constant="20" id="WHn-bO-zzd"/>
                             <constraint firstItem="AKL-sn-SB2" firstAttribute="leading" secondItem="DWQ-jx-Baf" secondAttribute="leading" constant="20" id="hg5-eY-Ieq"/>
                             <constraint firstItem="DWQ-jx-Baf" firstAttribute="trailing" secondItem="GhN-3x-7rD" secondAttribute="trailing" constant="20" id="n10-rj-IJi"/>
+                            <constraint firstItem="pJg-C5-Y2u" firstAttribute="centerX" secondItem="lxO-54-wRd" secondAttribute="centerX" id="x5T-ED-5Lq"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="CreateAccountBtn" destination="GhN-3x-7rD" id="fRS-ds-bJZ"/>
                         <outlet property="LoginAnonymouslyBtn" destination="AKL-sn-SB2" id="7Hp-Cu-eSp"/>
                         <outlet property="LoginBtn" destination="9L8-CV-YEk" id="IbN-Mb-e5Y"/>
+                        <outlet property="activity" destination="pJg-C5-Y2u" id="jlS-LX-iWb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XMd-6k-rdm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

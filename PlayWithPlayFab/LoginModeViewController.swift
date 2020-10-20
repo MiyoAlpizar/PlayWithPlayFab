@@ -12,15 +12,21 @@ class LoginModeViewController: UIViewController {
     @IBOutlet weak var LoginAnonymouslyBtn: UIButton!
     @IBOutlet weak var LoginBtn: UIButton!
     @IBOutlet weak var CreateAccountBtn: UIButton!
+    @IBOutlet weak var activity: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activity.hide()
     }
     
     
     @IBAction func LoginAnonymously(_ sender: Any) {
+        activity.show()
+        self.view.isUserInteractionEnabled = false
         PlayFabHelper.shared.LoginAnonymousUser { [weak self] (result) in
             guard let `self` = self else { return }
+            self.activity.hide()
+            self.view.isUserInteractionEnabled = true
             switch result {
             case .success(let ok):
                 AppHelper.shared.setString(type: UserStrings.playFabID, value: ok.playFabId)
