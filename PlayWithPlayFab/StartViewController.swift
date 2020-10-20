@@ -20,12 +20,11 @@ class StartViewController: UIViewController {
         initAll()
         animateBackground()
         validateIfRegistered()
-        //loginAnonnymously()
     }
     
     private func validateIfRegistered() {
         if AppHelper.shared.getString(type: UserStrings.playFabID) != "" {
-            isRegistered = false
+            isRegistered = true
         }
     }
     
@@ -46,7 +45,11 @@ class StartViewController: UIViewController {
                 self.indexColor = 0
             }
             if self.loops > 5 {
-                self.goMain()
+                if !AppHelper.shared.getBool(type: UserStrings.isLoginAnonymously) {
+                    self.goMain()
+                }else {
+                    self.loginAnonnymously()
+                }
             }else if self.loops > 3 && !self.isRegistered {
                 self.goChooseLogin()
             }
@@ -62,7 +65,9 @@ class StartViewController: UIViewController {
             switch result {
             case .success(let ok):
                 AppHelper.shared.setString(type: UserStrings.playFabID, value: ok.playFabId)
+                AppHelper.shared.setBool(type: UserStrings.isLoginAnonymously, value: true)
                 self.isRegistered = true
+                self.goMain()
             case .failure(let error):
                 self.alert(message: error.localizedDescription)
             }

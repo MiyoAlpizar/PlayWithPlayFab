@@ -105,6 +105,7 @@ class CreateAccountViewController: UIViewController {
     }
     
     private func goMain() {
+        AppHelper.shared.setBool(type: UserStrings.isLoginAnonymously, value: false)
         if AppHelper.shared.getString(type: UserStrings.playFabID) != "" {
             let vc = UIStoryboard.main.instantiate(ViewController.self)
             UIWindow.key?.rootViewController = vc

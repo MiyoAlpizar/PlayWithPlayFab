@@ -10,7 +10,7 @@ import Foundation
 enum UserStrings: String {
     case token = "token"
     case playFabID = "playFabID"
-    
+    case isLoginAnonymously = "isLoginAnonymously"
 }
 
 class AppHelper {

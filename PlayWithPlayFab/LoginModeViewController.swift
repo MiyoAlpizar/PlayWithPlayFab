@@ -30,6 +30,7 @@ class LoginModeViewController: UIViewController {
             switch result {
             case .success(let ok):
                 AppHelper.shared.setString(type: UserStrings.playFabID, value: ok.playFabId)
+                AppHelper.shared.setBool(type: UserStrings.isLoginAnonymously, value: true)
                 self.goMain()
             case .failure(let error):
                 self.alert(message: error.localizedDescription)
