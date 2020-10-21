@@ -17,6 +17,8 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var btnCreateAccount: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    public var isAddEmail: Bool = false
+    
     
     let viewModel = CreateAccountViewModel()
     let keyboardHelper = KeyBoardHelper()
@@ -86,7 +88,34 @@ class CreateAccountViewController: UIViewController {
             }
             return
         }
+        if !isAddEmail {
+            createAccount(name: name, userName: userName, email: email)
+        }else {
+            addEmail(userName: userName, email: email)
+        }
         
+    }
+    
+    private func addEmail(userName: String, email: String) {
+        self.view.isUserInteractionEnabled = false
+        loading.startAnimating()
+        loading.isHidden = false
+        PlayFabHelper.shared.AddUserAndPassword(email: email, userName: userName, password: txtPwd.text!) { [weak self] (result) in
+            guard let `self` = self else { return }
+            self.view.isUserInteractionEnabled = true
+            self.loading.stopAnimating()
+            self.loading.isHidden = true
+            switch result {
+            case .success(_):
+                AppHelper.shared.setBool(type: UserStrings.isLoginAnonymously, value: false)
+                self.dismiss(animated: true, completion: nil)
+            case .failure(let error):
+                self.alert(message: error.localizedDescription)
+            }
+        }
+    }
+    
+    private func createAccount(name: String, userName: String, email: String) {
         self.view.isUserInteractionEnabled = false
         loading.startAnimating()
         loading.isHidden = false

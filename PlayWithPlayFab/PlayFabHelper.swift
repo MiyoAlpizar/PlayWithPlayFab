@@ -8,9 +8,14 @@
 import Foundation
 import UIKit
 
+protocol PlayFabDelegate: class {
+    func onUserInfoChanged(info: ClientUserAccountInfo)
+}
+
 class PlayFabHelper {
     private let api = PlayFabClientAPI()
     private static var _shared = PlayFabHelper()
+    public weak var delegate: PlayFabDelegate?
     
     public static var shared: PlayFabHelper {
         get {
@@ -53,9 +58,14 @@ class PlayFabHelper {
         request.email = email
         request.username = userName
         request.password = password
+        
+        
         api.addUsernamePassword(request, success: { (result, obj) in
             if let result = result {
                 done(.success(result.username))
+                self.GetUserInfo { (result) in
+                    
+                }
             }
         }, failure: { (error, obj) in
             if let error = error {
@@ -71,6 +81,9 @@ class PlayFabHelper {
         api.getAccountInfo(request, success: { (result, obj) in
             if let result = result {
                 done(.success(result.accountInfo))
+                if let delegate = self.delegate {
+                    delegate.onUserInfoChanged(info: result.accountInfo)
+                }
             }
         }, failure: { (error, obj) in
             if let error = error {

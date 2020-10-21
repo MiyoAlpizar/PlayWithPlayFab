@@ -19,7 +19,7 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
         initAll()
         animateBackground()
-        validateIfRegistered()
+        //validateIfRegistered()
     }
     
     private func validateIfRegistered() {

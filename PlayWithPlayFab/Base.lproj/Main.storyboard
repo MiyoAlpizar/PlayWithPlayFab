@@ -53,17 +53,53 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email: No Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahx-B2-NEa">
+                                <rect key="frame" x="20" y="780" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name: No User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCO-J2-Ugt">
+                                <rect key="frame" x="20" y="739" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fco-ao-hSD">
+                                <rect key="frame" x="20" y="625" width="374" height="54"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.49803921569999998" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="IVZ-BX-SpO"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Add Email and Password To Save My Account"/>
+                                <connections>
+                                    <action selector="AddEmail:" destination="3ye-gi-LUg" eventType="touchUpInside" id="jUX-Gb-gBA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xrR-Fy-tyL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Ahx-B2-NEa" firstAttribute="leading" secondItem="xrR-Fy-tyL" secondAttribute="leading" constant="20" id="BlO-N2-wsN"/>
+                            <constraint firstItem="fCO-J2-Ugt" firstAttribute="leading" secondItem="xrR-Fy-tyL" secondAttribute="leading" constant="20" id="CWK-s6-mcO"/>
+                            <constraint firstItem="xrR-Fy-tyL" firstAttribute="trailing" secondItem="fCO-J2-Ugt" secondAttribute="trailing" constant="20" id="DVO-PE-iNw"/>
                             <constraint firstItem="HH1-3d-Qe1" firstAttribute="leading" secondItem="xrR-Fy-tyL" secondAttribute="leading" constant="20" id="N9f-nh-ukk"/>
+                            <constraint firstItem="xrR-Fy-tyL" firstAttribute="trailing" secondItem="fco-ao-hSD" secondAttribute="trailing" constant="20" id="RWa-Qv-uiS"/>
+                            <constraint firstItem="HH1-3d-Qe1" firstAttribute="top" secondItem="Ahx-B2-NEa" secondAttribute="bottom" constant="20" id="SEM-gR-Ohi"/>
+                            <constraint firstItem="Ahx-B2-NEa" firstAttribute="top" secondItem="fCO-J2-Ugt" secondAttribute="bottom" constant="20" id="UaH-Gq-6rB"/>
+                            <constraint firstItem="fco-ao-hSD" firstAttribute="leading" secondItem="xrR-Fy-tyL" secondAttribute="leading" constant="20" id="XEG-XP-WuQ"/>
+                            <constraint firstItem="fCO-J2-Ugt" firstAttribute="top" secondItem="fco-ao-hSD" secondAttribute="bottom" constant="60" id="Zn3-8x-GIf"/>
+                            <constraint firstItem="xrR-Fy-tyL" firstAttribute="trailing" secondItem="Ahx-B2-NEa" secondAttribute="trailing" constant="20" id="ohU-RA-Fe2"/>
                             <constraint firstItem="xrR-Fy-tyL" firstAttribute="trailing" secondItem="HH1-3d-Qe1" secondAttribute="trailing" constant="20" id="pCZ-wD-4WO"/>
                             <constraint firstItem="xrR-Fy-tyL" firstAttribute="bottom" secondItem="HH1-3d-Qe1" secondAttribute="bottom" constant="20" id="yVk-pJ-b2Z"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnAddEmail" destination="fco-ao-hSD" id="VIO-KM-Tp7"/>
+                        <outlet property="lblDisplayName" destination="Ahx-B2-NEa" id="LoO-B9-afJ"/>
                         <outlet property="lblPlayFab" destination="HH1-3d-Qe1" id="s8S-kO-YIv"/>
+                        <outlet property="lblUserName" destination="fCO-J2-Ugt" id="Exf-KC-i3y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Izw-pb-EV9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
