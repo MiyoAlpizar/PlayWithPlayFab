@@ -18,10 +18,8 @@ class ViewController: UIViewController, NotificationsDelegate {
         NotificationsHelper.shared.delegate = self
         NotificationsHelper.shared.configPushNotifications()
         lblPlayFab.text = "PlayFab ID: " + AppHelper.shared.getString(type: UserStrings.playFabID)
-        PlayFabHelper.shared.UserHasUserNameAndPassword { (has) in
-            print("Has " + has.description)
-        }
         loadUserInfo()
+        PlayFabHelper.shared.delegate = self
     }
     
     func didSetNotification() {
