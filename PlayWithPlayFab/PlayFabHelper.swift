@@ -55,9 +55,9 @@ class PlayFabHelper {
     /// If user wants to have the chance to recovery their accounts, they have to add Emai, userName and password to their current anonnymous account
     public func AddUserAndPassword(email: String,userName: String, password: String, done: @escaping(Result<String, Error>) -> Void) {
         let request = ClientAddUsernamePasswordRequest()
-        request.email = email
-        request.username = userName
-        request.password = password
+        request.email = email.trim()
+        request.username = userName.trim()
+        request.password = password.trim()
         
         
         api.addUsernamePassword(request, success: { (result, obj) in
@@ -129,8 +129,8 @@ class PlayFabHelper {
     public func LoginWithEmailAndPassword(email: String, pwd: String, completion: @escaping(Result<Bool, Error>) -> Void) {
         
         let request = ClientLoginWithEmailAddressRequest()
-        request.email = email
-        request.password = pwd
+        request.email = email.trim()
+        request.password = pwd.trim()
         api.login(withEmailAddress: request, success: { (result, obj) in
             if let result = result {
                 completion(.success(true))
@@ -148,10 +148,10 @@ class PlayFabHelper {
     /// Registers User And The Make the Login
     public func RegisterUser(userName: String, name: String,email: String, pwd: String, completion: @escaping(Result<String, Error>) -> Void) {
         let request = ClientRegisterPlayFabUserRequest()
-        request.username = userName
-        request.email = email
-        request.password = pwd
-        request.displayName = name
+        request.username = userName.trim()
+        request.email = email.trim()
+        request.password = pwd.trim()
+        request.displayName = name.trim()
         request.titleId = "62E19"
          api.registerPlayFabUser(request, success: { (result, obj) in
             guard let result = result else {
@@ -180,8 +180,8 @@ class PlayFabHelper {
     /// Login with User
     public func LoginWithUserAndPassword(user: String,pwd: String, completion: @escaping(Bool) -> Void) {
         let request = ClientLoginWithPlayFabRequest()
-        request.username = user
-        request.password = pwd
+        request.username = user.trim()
+        request.password = pwd.trim()
         api.login(withPlayFab: request, success: { (result, obj) in
             if let result = result {
                 completion(true)
